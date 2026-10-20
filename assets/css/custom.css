@@ -1,0 +1,932 @@
+/* ==========================================================================
+   INTERWIN - Custom Stylesheet (Modular & Production Ready)
+   Contains: Animations, Provider Carousel, Button SVGs, Mascot Fix, 
+             Snowfall Canvas, SEO Container Box & FAQ Accordion
+   ========================================================================== */
+
+/* === 1. Snowfall Animation Canvas === */
+#snowfall_canvas {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    pointer-events: none !important;
+    z-index: 99998 !important;
+}
+
+/* === 2. Announcement Marquee === */
+.announcement-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.announcement-container > [data-section="announcements"] {
+    flex: 1;
+    overflow: hidden !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    background: #181818 !important;
+    border-radius: 4px;
+    padding: 4px 10px;
+}
+.announcement-marquee-wrapper {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    will-change: transform;
+}
+.announcement-marquee-wrapper .announcement-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.announcement-marquee-wrapper .announcement-list li {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding: 0 35px 0 0;
+    color: #f7ca38 !important;
+    font-size: 13.5px;
+    white-space: nowrap;
+}
+.announcement-marquee-wrapper .announcement-list li::after {
+    content: "✦";
+    margin-left: 35px;
+    color: #ffd700;
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+/* === 3. Progressive Jackpot === */
+#progressive_jackpot {
+    font-family: 'Open24DisplaySt', 'digital_sans_ef_medium', monospace, sans-serif !important;
+    font-size: 28px !important;
+    color: #ffde59 !important;
+    font-weight: bold !important;
+    text-shadow: 0 0 12px rgba(255, 222, 89, 0.7), 0 0 24px rgba(220, 160, 20, 0.5) !important;
+    letter-spacing: 1.5px !important;
+    display: inline-block !important;
+    min-width: 220px;
+}
+.home-progressive-jackpot .jackpot-currency {
+    color: #e5b33d !important;
+    font-weight: bold !important;
+    font-size: 22px !important;
+    margin-right: 8px !important;
+}
+
+/* === 4. Download APK Container Slide-In === */
+.download-apk-container {
+    overflow: hidden !important;
+    position: relative;
+}
+.download-apk {
+    overflow: hidden !important;
+}
+.download-apk > div {
+    flex-basis: 50%;
+    opacity: 0;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.2s ease !important;
+    will-change: transform, opacity;
+}
+.download-apk > div:nth-child(1) {
+    transform: translateX(-100%);
+}
+.download-apk > div:nth-child(2) {
+    transform: translateX(100%);
+}
+.download-apk.in-view > div:nth-child(1) {
+    transform: translateX(0%) !important;
+    opacity: 1 !important;
+}
+.download-apk.in-view > div:nth-child(2) {
+    transform: translateX(0%) !important;
+    opacity: 1 !important;
+}
+
+/* === 5. Jackpot Winners Vertical Smooth Scroll === */
+.jackpot-winners .winners-ticker-container {
+    height: 140px !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+.jackpot-winners .winners-ticker {
+    position: relative;
+    width: 100%;
+}
+.jackpot-winners .winners-ticker ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    width: 100%;
+    will-change: transform;
+}
+.jackpot-winners .winners-ticker ul li {
+    display: flex !important;
+    align-items: center !important;
+    height: 70px !important;
+    box-sizing: border-box !important;
+    padding: 8px 10px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    transition: background 0.2s ease;
+}
+.jackpot-winners .winners-ticker ul li:hover {
+    background: rgba(229, 179, 61, 0.1);
+}
+.jackpot-winners .winners-ticker ul li picture,
+.jackpot-winners .winners-ticker ul li img {
+    height: 50px !important;
+    width: 50px !important;
+    border-radius: 4px;
+    object-fit: cover;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+.jackpot-winners .winners-ticker ul li .winner-info {
+    font-size: 12px;
+    line-height: 1.35;
+    flex: 1;
+    overflow: hidden;
+}
+.jackpot-winners .winners-ticker ul li .winner-info > div:nth-child(1) {
+    font-weight: bold;
+    color: #ffffff;
+}
+.jackpot-winners .winners-ticker ul li .winner-info > div:nth-child(2) {
+    color: #f7ca38;
+    font-weight: 700;
+}
+.jackpot-winners .winners-ticker ul li .winner-info > div:nth-child(3) {
+    color: #bbbbbb;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* === 6. Banner Carousel === */
+.banner {
+    position: relative !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    background: #020518;
+    aspect-ratio: 1920 / 613;
+}
+.banner-carousel {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    display: block !important;
+}
+.banner-carousel-track {
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+    transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+.banner-carousel-slide {
+    min-width: 100% !important;
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    display: block !important;
+    height: 100% !important;
+}
+.banner-carousel-slide a {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+.banner-carousel-slide img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1920 / 613;
+    object-fit: cover !important;
+}
+.banner-carousel > div:not(:first-child),
+.banner-carousel > div:first-child > a:not(:first-child) {
+    display: block !important;
+}
+.banner-indicators {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 20;
+    list-style: none;
+    margin: 0;
+    padding: 6px 16px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    border: 1px solid rgba(229, 179, 61, 0.3);
+}
+.banner-indicator-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+.banner-indicator-dot.active {
+    background: #e5b33d;
+    border-color: #ffd700;
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(229, 179, 61, 0.85);
+}
+.banner-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(229, 179, 61, 0.5);
+    color: #e5b33d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    font-size: 26px;
+    transition: all 0.3s ease;
+    user-select: none;
+    line-height: 1;
+}
+.banner-arrow:hover {
+    background: rgba(229, 179, 61, 0.9);
+    color: #000;
+    box-shadow: 0 0 16px rgba(229, 179, 61, 0.7);
+}
+.banner-arrow-prev { left: 16px; }
+.banner-arrow-next { right: 16px; }
+
+/* === 7. Popular Games Section & Provider Tabs Carousel === */
+.popular-games {
+    display: flex !important;
+    position: relative;
+    background: center top no-repeat;
+    background-image: var(--image-src);
+    background-color: #02071c;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.popular-games.col-md-12-animated {
+    animation: section-fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes section-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.popular-games [data-section="left"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 235px;
+    flex: 0 0 235px;
+    margin-right: 15px;
+}
+.popular-games [data-section="right"] {
+    flex: 1 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-right: 10px;
+}
+
+/* Provider Tabs Navigation Slider */
+.popular-providers-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 480px;
+    max-width: 100%;
+    margin-bottom: 8px;
+    background: #0e0e0e;
+    border: 1px solid #282828;
+    border-radius: 6px;
+    padding: 3px 6px;
+    box-sizing: border-box;
+}
+.popular-providers-nav-btn {
+    background: transparent;
+    border: none;
+    color: #e5b33d;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 26px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    user-select: none;
+    transition: color 0.2s, transform 0.2s;
+    flex-shrink: 0;
+}
+.popular-providers-nav-btn:hover {
+    color: #ffd700;
+    transform: scale(1.15);
+}
+.popular-providers-viewport {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    margin: 0 4px;
+}
+.popular-games ul.nav-tabs#popular_providers {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    border-bottom: none !important;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+.popular-games ul.nav-tabs#popular_providers > li {
+    flex: 0 0 calc(100% / 3) !important;
+    min-width: calc(100% / 3) !important;
+    margin: 0 !important;
+    padding: 2px !important;
+    box-sizing: border-box;
+}
+.popular-games ul.nav-tabs#popular_providers > li > a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 38px !important;
+    padding: 2px 6px !important;
+    margin: 0 !important;
+    background: #141414 !important;
+    border: 1px solid #222 !important;
+    border-radius: 4px !important;
+    transition: all 0.25s ease !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+.popular-games ul.nav-tabs#popular_providers > li > a img {
+    max-height: 28px !important;
+    max-width: 90% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    filter: brightness(0.85);
+    transition: filter 0.25s, transform 0.25s;
+}
+.popular-games ul.nav-tabs#popular_providers > li:hover > a {
+    background: #202020 !important;
+    border-color: #555 !important;
+}
+.popular-games ul.nav-tabs#popular_providers > li:hover > a img {
+    filter: brightness(1);
+}
+.popular-games ul.nav-tabs#popular_providers > li.active > a {
+    background: #1f1d18 !important;
+    border-color: #e5b33d !important;
+    box-shadow: 0 0 10px rgba(229, 179, 61, 0.4) !important;
+}
+.popular-games ul.nav-tabs#popular_providers > li.active > a img {
+    filter: brightness(1.15) drop-shadow(0 0 4px rgba(229, 179, 61, 0.4));
+    transform: scale(1.05);
+}
+
+/* === 8. Tab Content & Mascot Image Dimension Fix (Full-Bleed, No Gap) === */
+.popular-games .tab-content {
+    position: relative !important;
+    border: 1px solid #222 !important;
+    background: #050a18 !important;
+    border-radius: 6px !important;
+    min-height: 334px !important;
+    height: 334px !important;
+    overflow: hidden !important;
+    margin-top: 0 !important;
+}
+.popular-games .tab-pane {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 334px !important;
+    display: none !important;
+    align-items: stretch !important;
+    background: transparent !important;
+    overflow: hidden !important;
+}
+.popular-games .tab-pane.active {
+    display: flex !important;
+    animation: tab-pane-fade-in 0.35s ease both;
+}
+@keyframes tab-pane-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 6-game list on left */
+.popular-games .popular-game-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 480px !important;
+    flex: 0 0 480px !important;
+    padding: 6px !important;
+    box-sizing: border-box !important;
+    z-index: 2 !important;
+    position: relative !important;
+    background: transparent !important;
+}
+.popular-games .popular-game-list .game-item {
+    width: calc(100% / 3) !important;
+    padding: 4px !important;
+    box-sizing: border-box !important;
+}
+.popular-games .popular-game-list .game-wrapper {
+    position: relative !important;
+    padding-top: 100% !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    background: #0f1322 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s !important;
+}
+.popular-games .popular-game-list .game-wrapper:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6), 0 0 10px rgba(229, 179, 61, 0.3) !important;
+    border-color: #e5b33d !important;
+}
+.popular-games .popular-game-list .game-wrapper picture {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    z-index: 1 !important;
+}
+.popular-games .popular-game-list .game-wrapper picture img,
+.popular-games .popular-game-list .game-wrapper img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    z-index: 1 !important;
+}
+
+/* === 9. Game Action Buttons: SVG Icon Enhancements (COBA & MAIN) === */
+.popular-games .popular-game-list .link-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: rgba(0, 0, 0, 0.78) !important;
+    backdrop-filter: blur(2px) !important;
+    opacity: 0 !important;
+    transition: opacity 0.25s ease !important;
+    z-index: 5 !important;
+    padding: 4px !important;
+}
+.popular-games .popular-game-list .game-item:hover .link-container {
+    opacity: 1 !important;
+}
+.popular-games .popular-game-list .link-container a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    padding: 6px 10px !important;
+    width: 82% !important;
+    text-align: center;
+    font-size: 11.5px !important;
+    font-weight: 700 !important;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 0.6px;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+}
+.popular-games .popular-game-list .link-container a svg.btn-svg-icon {
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+.popular-games .popular-game-list .link-container a:hover svg.btn-svg-icon {
+    transform: scale(1.18);
+}
+.popular-games .popular-game-list .link-container a.free-play {
+    background: #2b2b2b !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #484848 !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+.popular-games .popular-game-list .link-container a.free-play:hover {
+    background: #3a3a3a !important;
+    color: #ffd700 !important;
+    border-color: #ffd700 !important;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.35);
+}
+.popular-games .popular-game-list .link-container a.play-now {
+    background: linear-gradient(135deg, #f7ca38 0%, #d89614 100%) !important;
+    color: #121212 !important;
+    border: 1px solid #ffe277 !important;
+    box-shadow: 0 2px 8px rgba(229, 179, 61, 0.4);
+}
+.popular-games .popular-game-list .link-container a.play-now:hover {
+    background: linear-gradient(135deg, #ffe57f 0%, #e5a522 100%) !important;
+    color: #000000 !important;
+    box-shadow: 0 0 14px rgba(247, 202, 56, 0.85);
+    transform: scale(1.02);
+}
+
+/* === 10. Provider Mascot Image: Fits the Entire Right Container (DIRECT CHILD ONLY) === */
+.popular-games .tab-pane > picture {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 480px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.popular-games .tab-pane > picture .animated-image,
+.popular-games .tab-pane > .animated-image {
+    position: static !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: none !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+    animation: fade-in-right-mascot 0.7s cubic-bezier(0.16, 1, 0.3, 1) both !important;
+}
+@keyframes fade-in-right-mascot {
+    0% {
+        opacity: 0;
+        transform: translate3d(35px, 0, 0) scale(1.03);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+/* Smooth Horizontal Scrollbar for Game Populer */
+.popular-game-title-container .container-content .game-list {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-behavior: smooth;
+    gap: 12px;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: #555 #111;
+}
+.popular-game-title-container .container-content .game-list::-webkit-scrollbar {
+    height: 6px;
+}
+.popular-game-title-container .container-content .game-list::-webkit-scrollbar-track {
+    background: #111;
+    border-radius: 4px;
+}
+.popular-game-title-container .container-content .game-list::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+.popular-game-title-container .container-content .game-list::-webkit-scrollbar-thumb:hover {
+    background: #e5b33d;
+}
+
+/* ==========================================================================
+   11. Redesigned Luxury SEO Container Box & Centered Typography
+   ========================================================================== */
+.interwin-seo-container,
+.tri7-seo-container {
+    width: 100%;
+    margin: 25px 0 35px 0;
+    display: block !important;
+    position: relative !important;
+}
+.interwin-seo-card,
+.tri7-seo-card {
+    background: linear-gradient(180deg, #12141c 0%, #090a10 100%) !important;
+    border: 1px solid rgba(229, 179, 61, 0.35) !important;
+    border-radius: 12px !important;
+    padding: 36px 30px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(229, 179, 61, 0.25) !important;
+    position: relative !important;
+    overflow: visible !important;
+    display: block !important;
+    height: auto !important;
+    min-height: auto !important;
+    box-sizing: border-box !important;
+}
+.interwin-seo-card::before,
+.tri7-seo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffd700, #ff9900, transparent);
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+    pointer-events: none;
+}
+.interwin-badge-wrapper,
+.tri7-badge-wrapper {
+    text-align: center;
+    margin-bottom: 14px;
+    display: block;
+}
+.interwin-gold-badge,
+.tri7-gold-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 16px;
+    border-radius: 20px;
+    background: rgba(229, 179, 61, 0.12);
+    border: 1px solid rgba(229, 179, 61, 0.45);
+    color: #ffde59;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 0 12px rgba(229, 179, 61, 0.2);
+}
+.interwin-seo-card h1.interwin-title,
+.tri7-seo-card h1.tri7-title,
+h1.interwin-title,
+h1.tri7-title {
+    font-size: 22px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.45;
+    margin: 0 auto 18px auto;
+    max-width: 960px;
+    background: linear-gradient(90deg, #ffffff 0%, #ffd700 45%, #ffae19 75%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(229, 179, 61, 0.35);
+    letter-spacing: 0.5px;
+    display: block;
+}
+.interwin-seo-card p.interwin-desc,
+.tri7-seo-card p.tri7-desc,
+p.interwin-desc,
+p.tri7-desc {
+    text-align: center;
+    color: #cfd3dc !important;
+    font-size: 13.5px !important;
+    line-height: 1.85 !important;
+    margin: 0 auto 16px auto !important;
+    max-width: 950px;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.interwin-seo-card p.interwin-desc a,
+.tri7-seo-card p.tri7-desc a,
+p.interwin-desc a,
+p.tri7-desc a {
+    color: #f7ca38 !important;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+.interwin-seo-card p.interwin-desc a:hover,
+.tri7-seo-card p.tri7-desc a:hover,
+p.interwin-desc a:hover,
+p.tri7-desc a:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+}
+
+/* ==========================================================================
+   12. Interactive Accordion FAQ Component
+   ========================================================================== */
+.interwin-faq-wrapper,
+.tri7-faq-wrapper {
+    margin-top: 36px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 28px;
+    display: block !important;
+    width: 100%;
+}
+.interwin-faq-title-area,
+.tri7-faq-title-area {
+    text-align: center;
+    margin-bottom: 22px;
+}
+.interwin-faq-title-area h2,
+.interwin-faq-title-area h3,
+.tri7-faq-title-area h2,
+.tri7-faq-title-area h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffd700;
+    margin: 0 0 6px 0;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.45);
+    letter-spacing: 0.5px;
+}
+.interwin-faq-title-area p,
+.tri7-faq-title-area p {
+    color: #9aa1b2;
+    font-size: 12.5px;
+    margin: 0;
+}
+.interwin-faq-accordion,
+.tri7-faq-accordion {
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.interwin-faq-item,
+.tri7-faq-item {
+    background: #141724;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+}
+.interwin-faq-item:hover,
+.tri7-faq-item:hover {
+    border-color: rgba(229, 179, 61, 0.5);
+}
+.interwin-faq-item.active,
+.tri7-faq-item.active {
+    border-color: #e5b33d;
+    box-shadow: 0 4px 18px rgba(229, 179, 61, 0.18);
+    background: #181d2c;
+}
+.interwin-faq-header,
+.tri7-faq-header {
+    width: 100%;
+    padding: 16px 20px;
+    background: transparent;
+    border: none;
+    color: #f3f4f6;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    gap: 14px;
+    outline: none;
+    user-select: none;
+    transition: color 0.25s;
+    box-sizing: border-box;
+}
+.interwin-faq-item.active .interwin-faq-header,
+.tri7-faq-item.active .tri7-faq-header,
+.interwin-faq-header:hover,
+.tri7-faq-header:hover {
+    color: #ffd700;
+}
+.interwin-faq-header span.faq-q-text,
+.tri7-faq-header span.faq-q-text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.interwin-faq-header span.faq-q-icon,
+.tri7-faq-header span.faq-q-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(229, 179, 61, 0.15);
+    color: #ffd700;
+    font-size: 11px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+.interwin-faq-toggle-icon,
+.tri7-faq-toggle-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e5b33d;
+    font-size: 14px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, background 0.3s, color 0.3s;
+}
+.interwin-faq-item.active .interwin-faq-toggle-icon,
+.tri7-faq-item.active .tri7-faq-toggle-icon {
+    transform: rotate(180deg);
+    background: #e5b33d;
+    color: #000;
+}
+.interwin-faq-body,
+.tri7-faq-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.25, 1, 0.5, 1), padding 0.35s ease;
+    padding: 0 20px;
+}
+.interwin-faq-item.active .interwin-faq-body,
+.tri7-faq-item.active .tri7-faq-body {
+    max-height: 500px;
+    padding: 4px 20px 18px 20px;
+}
+.interwin-faq-body-content,
+.tri7-faq-body-content {
+    color: #cfd5e1;
+    font-size: 13.5px;
+    line-height: 1.75;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 12px;
+}
+.interwin-faq-body-content p,
+.tri7-faq-body-content p {
+    margin: 0;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.faq-q-title {
+    display: inline;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .interwin-seo-card,
+    .tri7-seo-card {
+        padding: 24px 16px !important;
+    }
+    .interwin-seo-card h1.interwin-title,
+    .tri7-seo-card h1.tri7-title {
+        font-size: 17px;
+    }
+    .interwin-seo-card p.interwin-desc,
+    .tri7-seo-card p.tri7-desc,
+    p.interwin-desc,
+    p.tri7-desc {
+        font-size: 12.5px !important;
+    }
+    .interwin-faq-header,
+    .tri7-faq-header {
+        font-size: 13px;
+        padding: 14px 14px;
+    }
+}
