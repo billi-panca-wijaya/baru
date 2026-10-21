@@ -1527,17 +1527,17 @@
         <div id="banner_carousel" class="banner-carousel">
                 <div class="">
                         <a href="https://fupubco.com/futech" target="_self" rel="">
-                            <img src="https://img.warungwowo.shop/3-GJlQJkBiQb.webp" alt="Link Gacor" title="Link Gacor" loading="eager" fetchpriority="high" width="1920" height="600" />
+                            <img src="https://img.warungwowo.shop/ChatGPT-Image-Oct-21--2026--01_00_35-AM-QdyNczoO3i.webp" alt="Link Gacor" title="Link Gacor" loading="eager" fetchpriority="high" width="1920" height="600" />
                         </a>
                 </div>
                 <div class="">
                         <a href="https://fupubco.com/futech" target="_self" rel="">
-                            <img src="https://img.warungwowo.shop/2-1JUTS31la9.webp" alt="Slot Gacor" title="Slot Gacor" loading="lazy" width="1920" height="600" />
+                            <img src="https://img.warungwowo.shop/ChatGPT-Image-Oct-21--2026--01_00_35-AM-QdyNczoO3i.webp" alt="Slot Gacor" title="Slot Gacor" loading="lazy" width="1920" height="600" />
                         </a>
                 </div>
                 <div class="">
                         <a href="https://fupubco.com/futech" target="_self" rel="">
-                            <img src="https://img.warungwowo.shop/1-ioODXU6rfY.webp" alt="Slot Online" title="Slot Online" loading="lazy" width="1920" height="600" />
+                            <img src="https://img.warungwowo.shop/ChatGPT-Image-Oct-21--2026--01_00_35-AM-QdyNczoO3i.webp" alt="Slot Online" title="Slot Online" loading="lazy" width="1920" height="600" />
                         </a>
                 </div>
         </div>
